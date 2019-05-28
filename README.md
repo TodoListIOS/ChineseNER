@@ -1,7 +1,12 @@
 # ChineseNER
+本项目 fork 自<a href="https://github.com/buppt/ChineseNER">这个仓库</a>
 本项目使用
 + python 2.7
-+ tensorflow 1.7.0
++ pytorch 0.4.0
+
+本项目使用
++ python 3.6
++ tensorflow 1.17.0
 + pytorch 0.4.0
 
 
@@ -66,3 +71,5 @@ data文件夹中有三个开源数据集可供使用，玻森数据 (https://bos
 2018-10-6 增加使用参数确定是否使用预训练词向量进行训练。
 
 2018-10-11 增加功能：可以抽取一个文本文件中的实体，写入另一个文件中。
+
+2019-05-28 将python2 的 TensorFlow的实现更新为python3，将处理好的数据和训练好的模型一并传上来以方便使用的时候可以直接进行 python train.py pretrained 功能
