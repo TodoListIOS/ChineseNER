@@ -7,8 +7,7 @@
 
 本项目使用
 + python 3.6
-+ tensorflow 1.17.0
-+ pytorch 0.4.0
++ tensorflow 1.12.0
 
 
 对命名实体识别不了解的可以先看一下<a href="https://blog.csdn.net/buppt/article/details/81180361">这篇文章</a>。顺便求star～
