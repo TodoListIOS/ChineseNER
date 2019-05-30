@@ -1,9 +1,10 @@
 # ChineseNER
 本项目 fork 自<a href="https://github.com/buppt/ChineseNER">这个仓库</a>
 
-本项目使用
+源项目使用
 + python 2.7
 + pytorch 0.4.0
++ tensorflow 1.7.0
 
 本项目使用
 + python 3.6
