@@ -105,7 +105,12 @@ def data2pkl():
 def origin2tag():
     input_data = codecs.open('./origindata.txt', 'r', 'utf-8')
     output_data = codecs.open('./wordtag.txt', 'w', 'utf-8')
+    index = 0
     for line in input_data.readlines():
+        # print(line)
+        index += 1
+        if index >= 100:  # 先训练100行数据
+            break
         line = line.strip()
         i = 0
         while i < len(line):
@@ -126,6 +131,7 @@ def origin2tag():
                 output_data.write(line[i] + "/O ")
                 i += 1
         output_data.write('\n')
+    print('提取了original_data中的{}行数据'.format(index))
     input_data.close()
     output_data.close()
 
@@ -133,7 +139,7 @@ def origin2tag():
 def tagsplit():
     with open('./wordtag.txt', 'rb') as inp:
         texts = inp.read().decode('utf-8')
-    sentences = re.split('[，。！？、‘’“”（）]/[O]'.decode('utf-8'), texts)
+    sentences = re.split('[，。！？、‘’“”（）]/[O]', texts)
     output_data = codecs.open('./wordtagsplit.txt', 'w', 'utf-8')
     for sentence in sentences:
         if sentence != " ":
