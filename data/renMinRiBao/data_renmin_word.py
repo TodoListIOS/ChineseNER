@@ -82,7 +82,7 @@ def sentence2split():  # renmin4.txt中有2172条数据
             if sentence != " ":
                 outp.write(sentence.strip() + '\n')
                 line_num += 1
-                if line_num >= 10000:  # 先拿2000条数据作为train和test的集合
+                if line_num >= 2000:  # 先拿2000条数据作为train和test的集合
                     break
 
 
